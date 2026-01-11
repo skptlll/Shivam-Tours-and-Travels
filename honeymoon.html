@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honeymoon Packages | Shivam Tour Travels</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+    background: whitesmoke;
+    background-color: pink;
+    color: #222;
+    padding: 20px;
+    }
+
+
+    .packages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1.2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-content h2 {
+      color: #d81b60;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content ul {
+      list-style: disc;
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .price {
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+
+    button {
+      padding: 0.6rem;
+      background-color: palevioletred;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+    .navbar {
+   
+   background-color: whitesmoke;
+   padding: 1rem 0;
+ }
+
+ .navbar-nav .nav-link {
+   font-weight: 500;
+   color: #000;
+   padding: 0.75rem 1rem;
+   transition: all 0.3s ease;
+ }
+
+ .navbar-nav .nav-link:hover,
+ .navbar-nav .nav-link.active {
+   background-color: #0d6efd;
+   color: white;
+   border-radius: 8px;
+ }
+
+ .dropdown-menu {
+   border: none;
+   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   margin-top: 10px;
+ }
+
+ .dropdown-item {
+   padding: 10px 20px;
+   transition: background 0.2s;
+ }
+
+ .dropdown-item:hover {
+   background-color: #f8f9fa;
+ }
+ .logo img{
+   height: 60px;
+   width: 150px;
+ }
+h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #df230a;
+      margin-top: 50px;
+    }
+    .book-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 18px;
+      background: none;
+      color: #2c3e50;
+      border: 2px solid #2c3e50;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+    .book-btn:hover {
+      background-color: pink;
+      color: black;
+    }
+footer{
+  margin-top: 50px;
+}
+  </style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+  <div class="container">
+   
+    <div class="logo">
+      <img src="image/shivam-logo.png" alt="logo">
+    </div>
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="flight.html">Flight Booking</a></li>
+            <li><a class="dropdown-item" href="Hotel.html">Hotel Booking</a></li>
+            <li><a class="dropdown-item" href="bus.html">Bus Booking</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Destinations</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Domenstic.html">Domestic</a></li>
+            <li><a class="dropdown-item" href="International.html">International</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Packages</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="family.html">Family</a></li>
+            <li><a class="dropdown-item" href="honeymoon.html">Honeymoon</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+    
+      <h1>Honeymoon packages</h1>
+  <section class="packages">
+    <!-- Package 1 -->
+    <div class="card">
+      <img src="honeymoon/manali.jpeg" alt="Manali" />
+      <div class="card-content">
+        <h2>Manali Honeymoon Delight</h2>
+        <ul>
+          <li>5 Days / 4 Nights</li>
+          <li>Luxury Stay & Candlelight Dinner</li>
+          <li>Snow Activities & Sightseeing</li>
+        </ul>
+        <p class="price">₹24,999 per couple</p>
+        <a href="honeymoonbook.html" class="book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Package 2 -->
+    <div class="card">
+      <img src="honeymoon/goa.jpeg" alt="Goa" />
+      <div class="card-content">
+        <h2>Romantic Goa Escape</h2>
+        <ul>
+          <li>4 Days / 3 Nights</li>
+          <li>Beach Resort Stay</li>
+          <li>Sunset Cruise & Water Sports</li>
+        </ul>
+        <p class="price">₹21,999 per couple</p>
+        <a href="honeymoonbook.html" class="book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Package 3 -->
+    <div class="card">
+      <img src="honeymoon/kashmir.jpeg" alt="Kashmir" />
+      <div class="card-content">
+        <h2>Kashmir Paradise Tour</h2>
+        <ul>
+          <li>6 Days / 5 Nights</li>
+          <li>Houseboat Stay & Shikara Ride</li>
+          <li>Gulmarg, Sonmarg & Pahalgam</li>
+        </ul>
+        <p class="price">₹34,999 per couple</p>
+        <a href="honeymoonbook.html" class="book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Package 4 -->
+    <div class="card">
+      <img src="honeymoon/kerala.jpeg" alt="Kerala" />
+      <div class="card-content">
+        <h2>Kerala Backwater Bliss</h2>
+        <ul>
+          <li>5 Days / 4 Nights</li>
+          <li>Houseboat Cruise & Spa</li>
+          <li>Munnar & Alleppey Sightseeing</li>
+        </ul>
+        <p class="price">₹29,999 per couple</p>
+        <a href="honeymoonbook.html" class="book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Package 5 -->
+    <div class="card">
+      <img src="honeymoon/andman.jpeg" alt="Andaman" />
+      <div class="card-content">
+        <h2>Andaman Beach Romance</h2>
+        <ul>
+          <li>5 Days / 4 Nights</li>
+          <li>Island Hopping & Snorkeling</li>
+          <li>Luxury Beach Resort Stay</li>
+        </ul>
+        <p class="price">₹36,999 per couple</p>
+        <a href="honeymoonbook.html" class="book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Package 6 -->
+    <div class="card">
+      <img src="honeymoon/udaipur.jpeg" alt="Udaipur" />
+      <div class="card-content">
+        <h2>Royal Udaipur Getaway</h2>
+        <ul>
+          <li>3 Days / 2 Nights</li>
+          <li>Lake View Stay</li>
+          <li>Palace Tour & Cultural Night</li>
+        </ul>
+        <p class="price">₹18,499 per couple</p>
+        <a href="honeymoonbook.html" class="book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Package 7 -->
+    <div class="card">
+      <img src="honeymoon/Darjeeling.jpeg" alt="Darjeeling" />
+      <div class="card-content">
+        <h2>Darjeeling Tea & Love</h2>
+        <ul>
+          <li>4 Days / 3 Nights</li>
+          <li>Himalayan Toy Train Ride</li>
+          <li>Tea Estate & Sunset Point</li>
+        </ul>
+        <p class="price">₹22,499 per couple</p>
+        <a href="honeymoonbook.html" class="book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Package 8 -->
+    <div class="card">
+      <img src="honeymoon/Shimla.jpeg" alt="Shimla" />
+      <div class="card-content">
+        <h2>Shimla Snowy Escape</h2>
+        <ul>
+          <li>4 Days / 3 Nights</li>
+          <li>Mall Road & Kufri Visit</li>
+          <li>Cozy Hillside Cottage</li>
+        </ul>
+        <p class="price">₹20,999 per couple</p>
+        <a href="honeymoonbook.html" class="book-btn">Book Now</a>
+      </div>
+    </div>
+  </section>
+</body>
+<section id="contact" class="contact">
+  <footer class="bg-light text-dark pt-5 pb-4">
+    <div class="container text-center text-md-left">
+      <div class="row justify-content-center">
+        <!-- Company Info -->
+        <div class="col-md-4 text-center mb-4">
+          <h5 class="text-uppercase fw-bold">Shivam Tours and Travels</h5>
+          <p>Your trusted travel partner for unforgettable journeys.</p>
+        </div>
+  
+        <!-- Contact Info -->
+        <div class="col-md-4 text-center mb-4">
+          <h6 class="fw-bold mb-3">Contact Us</h6>
+          <p><i class="bi bi-envelope"></i> shivamtours@example.com</p>
+          <p><i class="bi bi-telephone"></i> +91 98765 43210</p>
+          <p><i class="bi bi-geo-alt"></i> Ahmedabad, India</p>
+        </div>
+      </div>
+  
+      <hr class="my-3" />
+  
+      <div class="row">
+        <div class="col text-center">
+          <p class="mb-0">© 2025 Shivam Tours and Travels. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap Icons (optional, for envelope/phone icons) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+</html>

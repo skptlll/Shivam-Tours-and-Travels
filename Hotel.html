@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Famous Domestic Hotels</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+
+    body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: white;
+    color: #222;
+    padding: 20px;
+  }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #df230a;
+      margin-top: 50px;
+    }
+
+    .hotel-list {
+
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .hotel-card {
+      display: flex;
+      flex-direction: row;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .hotel-card:hover {
+      transform: scale(1.02);
+    }
+
+    .hotel-image {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .hotel-info {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hotel-info h2 {
+      margin: 0;
+      color: #1a5276;
+    }
+
+    .hotel-info p {
+      margin-top: 5px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .hotel-card {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hotel-image {
+        width: 100%;
+        height: 200px;
+      }
+
+
+    }
+
+    .book-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  width: fit-content;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.book-btn:hover {
+  background: red;
+}
+.navbar {
+   
+   background-color: whitesmoke;
+   padding: 1rem 0;
+ }
+
+ .navbar-nav .nav-link {
+   font-weight: 500;
+   color: #000;
+   padding: 0.75rem 1rem;
+   transition: all 0.3s ease;
+ }
+
+ .navbar-nav .nav-link:hover,
+ .navbar-nav .nav-link.active {
+   background-color: #0d6efd;
+   color: white;
+   border-radius: 8px;
+ }
+
+ .dropdown-menu {
+   border: none;
+   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   margin-top: 10px;
+ }
+
+ .dropdown-item {
+   padding: 10px 20px;
+   transition: background 0.2s;
+ }
+
+ .dropdown-item:hover {
+   background-color: #f8f9fa;
+ }
+ .logo img{
+   height: 60px;
+   width: 150px;
+ }
+
+  </style>
+</head>
+<body>
+  
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+  <div class="container">
+   
+    <div class="logo">
+      <img src="image/shivam-logo.png" alt="logo">
+    </div>
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="flight.html">Flight Booking</a></li>
+            <li><a class="dropdown-item" href="Hotel.html">Hotel Booking</a></li>
+            <li><a class="dropdown-item" href="bus.html">Bus Booking</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Destinations</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Domenstic.html">Domestic</a></li>
+            <li><a class="dropdown-item" href="International.html">International</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Packages</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="family.html">Family</a></li>
+            <li><a class="dropdown-item" href="honeymoon.html">Honeymoon</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+
+<h1>Famous Domestic Hotels</h1>
+<div class="hotel-list">
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/goa.jpg" />
+    <div class="hotel-info">
+      <h2>Sunset Beach Resort, Goa</h2>
+      <p>Enjoy the sun, sand, and sea at this vibrant beachfront resort.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+  
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/udaipur.jpg" />
+    <div class="hotel-info">
+      <h2>Royal Lake View Hotel, Udaipur</h2>
+      <p>Experience royalty by the lakeside with heritage comfort.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/himalaya.jpg" />
+    <div class="hotel-info">
+      <h2>Himalayan Heights, Manali</h2>
+      <p>Breathtaking mountain views and cozy alpine atmosphere.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/jaipur.jpg" />
+    <div class="hotel-info">
+      <h2>The Pink Palace Hotel, Jaipur</h2>
+      <p>Traditional Rajasthani decor with luxurious comfort.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/delhi.jpg" />
+    <div class="hotel-info">
+      <h2>Capital Grand Residency, Delhi</h2>
+      <p>Modern elegance in the heart of the capital city.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/mumbai.jpg" />
+    <div class="hotel-info">
+      <h2>Bayfront Elite Hotel, Mumbai</h2>
+      <p>Seaside views and city luxury at your fingertips.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/munnar.jpg" />
+    <div class="hotel-info">
+      <h2>Misty Hill Retreat, Munnar</h2>
+      <p>Tranquil tea plantations and misty mountain views.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/rishikesh.jpg" />
+    <div class="hotel-info">
+      <h2>Riverfront Divine Stay, Rishikesh</h2>
+      <p>Spiritual peace by the banks of the Ganges.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/shimla.jpg" />
+    <div class="hotel-info">
+      <h2>Pineview Heights, Shimla</h2>
+      <p>Snowy pines and charming hill station hospitality.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/ooty.jpg" />
+    <div class="hotel-info">
+      <h2>Blue Mountain Heritage Hotel, Ooty</h2>
+      <p>Colonial style comfort in the queen of hills.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/darjeeling.jpg" />
+    <div class="hotel-info">
+      <h2>Tea Garden Inn, Darjeeling</h2>
+      <p>Wake up to the aroma of fresh tea gardens.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/varanasi.jpg" />
+    <div class="hotel-info">
+      <h2>Sacred Ganges Haveli, Varanasi</h2>
+      <p>Spiritual vibes with riverside serenity.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/rameswaram.jpg" />
+    <div class="hotel-info">
+      <h2>Seaside Devotion Residency, Rameswaram</h2>
+      <p>Where devotion meets the sea breeze.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/amritsar.jpg" />
+    <div class="hotel-info">
+      <h2>Golden Dome Suites, Amritsar</h2>
+      <p>Golden Temple views with luxurious suites.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/mysore.jpg" />
+    <div class="hotel-info">
+      <h2>Royal Heritage Residency, Mysore</h2>
+      <p>Live like royalty near the iconic palace.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/kanyakumari.jpg" />
+    <div class="hotel-info">
+      <h2>Ocean Horizon View Hotel, Kanyakumari</h2>
+      <p>Sunset views where oceans meet the sky.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/agra.jpg" />
+    <div class="hotel-info">
+      <h2>Taj Pearl Palace, Agra</h2>
+      <p>Elegant comfort with Taj Mahal views.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/pondicherry.jpg" />
+    <div class="hotel-info">
+      <h2>Colonial Courtyard Inn, Pondicherry</h2>
+      <p>French colonial charm and vibrant culture.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/andaman.jpg" />
+    <div class="hotel-info">
+      <h2>Coral Bay Resort, Andaman</h2>
+      <p>Beachfront bliss in the Andaman Islands.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+  <div class="hotel-card">
+    <img class="hotel-image" src="Hotel/lonavala.jpg" />
+    <div class="hotel-info">
+      <h2>Hilltop Breeze Resort, Lonavala</h2>
+      <p>Cool hill breezes and relaxing vibes await.</p>
+      <a href="hotelbook.html" class="book-btn">Book Now</a>
+    </div>
+  </div>
+
+</div>
+</body>
+<section id="contact" class="contact">
+  <footer class="bg-light text-dark pt-5 pb-4">
+    <div class="container text-center text-md-left">
+      <div class="row justify-content-center">
+        <!-- Company Info -->
+        <div class="col-md-4 text-center mb-4">
+          <h5 class="text-uppercase fw-bold">Shivam Tours and Travels</h5>
+          <p>Your trusted travel partner for unforgettable journeys.</p>
+        </div>
+  
+        <!-- Contact Info -->
+        <div class="col-md-4 text-center mb-4">
+          <h6 class="fw-bold mb-3">Contact Us</h6>
+          <p><i class="bi bi-envelope"></i> shivamtours@example.com</p>
+          <p><i class="bi bi-telephone"></i> +91 98765 43210</p>
+          <p><i class="bi bi-geo-alt"></i> Ahmedabad, India</p>
+        </div>
+      </div>
+  
+      <hr class="my-3" />
+  
+      <div class="row">
+        <div class="col text-center">
+          <p class="mb-0">© 2025 Shivam Tours and Travels. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap Icons (optional, for envelope/phone icons) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+</html>

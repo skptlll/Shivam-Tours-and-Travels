@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking - Shivam Tours and Travels</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+  
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: white;
+    color: #222;
+    padding: 20px;
+  }
+
+    .sk {
+      max-width: 700px;
+      margin: 10px auto;
+      background: #fff;
+      padding: 20px 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-top: 30px;
+      text-align: center;
+      margin-bottom: 25px;
+      color:red;
+    }
+
+    h1 {
+  text-align: center;
+  color: red;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    form textarea {
+      resize: vertical;
+    }
+
+    .btn {
+      width: 100%;
+      background: #007bff;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .success-message {
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      display: none;
+    }
+    .navbar {
+   background-color: whitesmoke;
+   padding: 1rem 0;
+ }
+
+ .navbar-nav .nav-link {
+   font-weight: 500;
+   color: #000;
+   padding: 0.75rem 1rem;
+   transition: all 0.3s ease;
+ }
+
+ .navbar-nav .nav-link:hover,
+ .navbar-nav .nav-link.active {
+   background-color: #0d6efd;
+   color: white;
+   border-radius: 8px;
+ }
+
+ .dropdown-menu {
+   border: none;
+   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   margin-top: 10px;
+ }
+
+ .dropdown-item {
+   padding: 10px 20px;
+   transition: background 0.2s;
+ }
+
+ .dropdown-item:hover {
+   background-color: #f8f9fa;
+ }
+ .logo img{
+   height: 60px;
+   width: 150px;
+ }
+footer{
+  margin-top: 50px;
+}
+  </style>
+</head>
+<body>
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+  <div class="container">
+   
+    <div class="logo">
+      <img src="image/shivam-logo.png" alt="logo">
+    </div>
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="flight.html">Flight Booking</a></li>
+            <li><a class="dropdown-item" href="Hotel.html">Hotel Booking</a></li>
+            <li><a class="dropdown-item" href="bus.html">Bus Booking</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Destinations</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="Domenstic.html">Domestic</a></li>
+            <li><a class="dropdown-item" href="International.html">International</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Packages</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="family.html">Family</a></li>
+            <li><a class="dropdown-item" href="honeymoon.html">Honeymoon</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<h2>Book Your Hotel</h2>
+  <div class="sk">
+   
+    <form id="bookingForm">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="hotel">Hotel Name</label>
+      <select id="hotel" name="hotel" required>
+        <option value="" disabled selected>Select Hotel</option>
+        <option value="Sunset Beach Resort goa">Sunset Beach Resort goa</option>
+        <option value="Royal Lake View Hotel Udaipur">Royal Lake View Hotel Udaipur</option>
+        <option value="Himalayan Heights Manali">Himalayan Heights Manali</option>
+        <option value="The Pink Palace Hotel Jaipur">The Pink Palace Hotel Jaipur</option>
+        <option value="Capital Grand Residency Delhi">Capital Grand Residency Delhi</option>
+        <option value="Bayfront Elite Hotel Mumbai">Bayfront Elite Hotel Mumbai</option>
+        <option value="Misty Hill Retreat Kerala (Munnar)">Misty Hill Retreat Kerala (Munnar)</option>
+        <option value="Riverfront Divine Stay Rishikesh">Riverfront Divine Stay Rishikesh</option>
+        <option value="Pineview Heights Shimla">Pineview Heights Shimla</option>
+        <option value="Blue Mountain Heritage Hotel Ooty ">Blue Mountain Heritage Hotel Ooty </option>
+        <option value="Tea Garden Inn Darjeeling ">Tea Garden Inn Darjeeling </option>
+        <option value="Sacred Ganges Haveli Varanasi">Sacred Ganges Haveli Varanasi</option>
+        <option value="Seaside Devotion Residency Rameswaram">Seaside Devotion Residency Rameswaram</option>
+        <option value="Golden Dome Suites Amritsar">Golden Dome Suites Amritsar</option>
+        <option value="Royal Heritage Residency Mysore">Royal Heritage Residency Mysore</option>
+        <option value="Ocean Horizon View Hotel Kanyakumari">Ocean Horizon View Hotel Kanyakumari</option>
+        <option value="Taj Pearl Palace Agra">Taj Pearl Palace Agra</option>
+        <option value="Colonial Courtyard Inn Pondicherry">Colonial Courtyard Inn Pondicherry</option>
+        <option value="Coral Bay Resort Andaman Islands">Coral Bay Resort Andaman Islands </option>
+        <option value="Hilltop Breeze Resort Lonavala">Hilltop Breeze Resort Lonavala</option>
+        
+        <!-- Add all 20 hotel names here -->
+      </select>
+
+      <label for="checkin">Check-In Date</label>
+      <input type="date" id="checkin" name="checkin" required>
+
+      <label for="checkout">Check-Out Date</label>
+      <input type="date" id="checkout" name="checkout" required>
+
+      <label for="guests">Number of Guests</label>
+      <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+      <button type="submit" class="btn">Confirm Booking</button>
+    </form>
+    <p class="success-message" id="successMessage">Thank you! Your booking was successful.</p>
+  </div>
+
+  <script>
+    const form = document.getElementById('bookingForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.style.display = 'none';
+      successMessage.style.display = 'block';
+    });
+  </script>
+
+</body>
+<section id="contact" class="contact">
+  <footer class="bg-light text-dark pt-5 pb-4">
+    <div class="container text-center text-md-left">
+      <div class="row justify-content-center">
+        <!-- Company Info -->
+        <div class="col-md-4 text-center mb-4">
+          <h5 class="text-uppercase fw-bold">Shivam Tours and Travels</h5>
+          <p>Your trusted travel partner for unforgettable journeys.</p>
+        </div>
+  
+        <!-- Contact Info -->
+        <div class="col-md-4 text-center mb-4">
+          <h6 class="fw-bold mb-3">Contact Us</h6>
+          <p><i class="bi bi-envelope"></i> shivamtours@example.com</p>
+          <p><i class="bi bi-telephone"></i> +91 98765 43210</p>
+          <p><i class="bi bi-geo-alt"></i> Ahmedabad, India</p>
+        </div>
+      </div>
+  
+      <hr class="my-3" />
+  
+      <div class="row">
+        <div class="col text-center">
+          <p class="mb-0">© 2025 Shivam Tours and Travels. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap Icons (optional, for envelope/phone icons) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+</html>
